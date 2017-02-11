@@ -1,6 +1,6 @@
 body{
 	background-color: #393A66;
-	margin: 0px;
+	font-family: sans-serif;
 }
 
 #container #header{
@@ -11,8 +11,23 @@ body{
 #container #content{
 	background-color: #FFFFFF;
 	color: #000000;
+	position: absolute;
+	left: 10%;
+	width: 90%;
+	height: 100%;
+}
+
+#content div{
+	opacity: 1;
+	transition: opacity 1s;
 }
 
 .invisible{
-	display: none;
+	opacity: 0 !important;
+}
+
+.layer{
+	position:absolute;
+	left:0px;
+
 }

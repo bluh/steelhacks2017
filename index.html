@@ -3,8 +3,33 @@
 	<head>
 		<title>SteelHacks 2017</title>
 		<link rel="stylesheet" href="style.css">
+		<script src="garments.js"></script>
+		<script>
+			function setupEvents(){
+				var menus = document.getElementsByTagName("select");
+				var updates = false;
+
+				for (var i = 0; i < menus.length; i++) {
+					menus[i].index = i;
+					menus[i].onclick = function(v){
+						if(v.srcElement.index == menus.length - 1 || updates){
+							updates = true;
+							var feedback = getFeedback();
+							if(feedback.length > 0){
+								document.getElementById("feedback").innerHTML = feedback;
+							}else{
+								document.getElementById("feedback").innerHTML = "Good";
+							}
+						}else{
+							v.srcElement.parentElement.nextElementSibling.className = "";
+							v.srcElement.parentElement.nextElementSibling.lastElementChild.disabled = false;
+						}
+					};
+				}
+			}
+		</script>
 	</head>
-	<body>
+	<body onload="setupEvents()">
 		<div id="container">
 			<div id="header">
 				SteelHacks 2017
@@ -24,7 +49,7 @@
 				</div>
 				<div id="shirtPatternSelect" class="invisible">
 					<p>What is the pattern of your shirt?</p>
-					<select id="shirtPattern">
+					<select disabled id="shirtPattern">
 						<option>Solid</option>
 						<option>Thin Striped</option>
 						<option>Medium Striped</option>
@@ -34,7 +59,7 @@
 				</div>
 				<div id="shirtColorSelect" class="invisible">
 					<p>What color is your shirt?</p>
-					<select id="shirtColor">
+					<select disabled id="shirtColor">
 						<option>White</option>
 						<option>Off-White</option>
 						<option>Light Blue</option>
@@ -45,7 +70,7 @@
 				</div>
 				<div id="tiePatternSelect" class="invisible">
 					<p>What is the pattern of your tie?</p>
-					<select id="tiePattern">
+					<select disabled id="tiePattern">
 						<option>Solid</option>
 						<option>Semi-Solid</option>
 						<option>Dotted</option>
@@ -58,7 +83,7 @@
 				</div>
 				<div id="tieColorSelect" class="invisible">
 					<p>What color is your tie?</p>
-					<select id="tieColor">
+					<select disabled id="tieColor">
 						<option>Red</option>
 						<option>Burgundy</option>
 						<option>Blue</option>
@@ -72,24 +97,15 @@
 				</div>
 				<div id="shoeColorSelect" class="invisible">
 					<p>What is the color of your shoes/belt?</p>
-					<select id="shoeColor">
+					<select disabled id="shoeColor">
 						<option>Black</option>
 						<option>Brown</option>
 						<option>Red/Burgundy</option>
 					</select>
 				</div>
+				<div id="feedback"></div>	
 			</div>
-		<script>
-			var menus = document.getElementsByTagName("select");
-
-			for (var i = 0; i < menus.length; i++) {
-				menus[i].index = i;
-				menus[i].onchange = function(v){
-					console.log(v);
-					v.srcElement.parentElement.nextElementSibling.className = "";
-				};
-			}
-		</script>
+			<div class="layer"></div>
 		</div>
 	</body>
 </html>
