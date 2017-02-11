@@ -8,7 +8,66 @@
 			function setupEvents(){
 				var menus = document.getElementsByTagName("select");
 				var updates = false;
-
+				var imgs = [
+					document.getElementById("suit"),
+					document.getElementById("shirtp"),
+					document.getElementById("shirtc"),
+					document.getElementById("tiep"),
+					document.getElementById("tiec"),
+					document.getElementById("shoes")
+				]
+				var imgsrcs = [
+					[
+						"suitimages/suits/navy.png",
+						"suitimages/suits/black.png",
+						"suitimages/suits/lightgrey.png",
+						"suitimages/suits/medgrey.png",
+						"suitimages/suits/charcoal.png",
+						"suitimages/suits/brown.png",
+						"suitimages/suits/blue.png"
+					],
+					[
+						"suitimages/shirtpatterns/solid.png",
+						"suitimages/shirtpatterns/thin.png",
+						"suitimages/shirtpatterns/med.png",
+						"suitimages/shirtpatterns/thick.png",
+						"suitimages/shirtpatterns/check.png"
+					],
+					[
+						"suitimages/shirts/white.png",
+						"suitimages/shirts/offwhite.png",
+						"suitimages/shirts/blue.png",
+						"suitimages/shirts/pink.png",
+						"suitimages/shirts/gold.png",
+						"suitimages/shirts/lavender.png"
+					],
+					[
+						"suitimages/tiepatterns/solid.png",
+						"suitimages/tiepatterns/semi.png",
+						"suitimages/tiepatterns/dot.png",
+						"suitimages/tiepatterns/floral.png",
+						"suitimages/tiepatterns/paisley.png",
+						"suitimages/tiepatterns/thin.png",
+						"suitimages/tiepatterns/thick.png",
+						"suitimages/tiepatterns/plaid.png"
+					],
+					[
+						"suitimages/ties/red.png",
+						"suitimages/ties/burgundy.png",
+						"suitimages/ties/blue.png",
+						"suitimages/ties/navy.png",
+						"suitimages/ties/orange.png",
+						"suitimages/ties/pink.png",
+						"suitimages/ties/lavender.png",
+						"suitimages/ties/yellow.png",
+						"suitimages/ties/green.png"
+					],
+					[
+						"suitimages/shoes/black.png",
+						"suitimages/shoes/brown.png",
+						"suitimages/shoes/burgundy.png"
+					]
+				]
 				for (var i = 0; i < menus.length; i++) {
 					menus[i].index = i;
 					menus[i].onclick = function(v){
@@ -25,6 +84,7 @@
 							v.srcElement.parentElement.nextElementSibling.className = "";
 							v.srcElement.parentElement.nextElementSibling.lastElementChild.disabled = false;
 						}
+						imgs[v.srcElement.index].src = imgsrcs[v.srcElement.index][v.srcElement.selectedIndex];
 					};
 				}
 			}
@@ -108,6 +168,12 @@
 				<p id="feedback" class="invisible"></p>	
 			</div>
 			<img class="layer" id="base" src="suitimages/blank.png"/>
+			<img class="layer" id="suit"/>
+			<img class="layer" id="shirtp" style="z-index:2"/>
+			<img class="layer" id="shirtc" style="z-index:1"/>
+			<img class="layer" id="shoes"/>
+			<img class="layer" id="tiep" style="z-index:2"/>
+			<img class="layer" id="tiec" style="z-index:1"/>
 		</div>
 	</body>
 </html>
