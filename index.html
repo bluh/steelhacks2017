@@ -1,7 +1,8 @@
+<!DOCTYPE html5>
 <html>
 	<head>
 		<title>SteelHacks 2017</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div id="container">
@@ -9,13 +10,87 @@
 				SteelHacks 2017
 			</div>
 			<div id="content">
-				<p>What garment do you want to match?</p>
-				<select id="garmentType">
-					<option id="shirt">Shirt</option>
-					<option id="pants">Pants</option>
-					<option id="shoes">Shoes</option>
-				</select>
+				<div id="suitSelect">
+					<p>What is the color of your suit?</p>
+					<select id="suitType">
+						<option>Navy</option>
+						<option>Black</option>
+						<option>Light Gray</option>
+						<option>Mid Gray</option>
+						<option>Charcoal</option>
+						<option>Earth Toned (Brown, Tan, Etc)</option>
+						<option>Blue</option>
+					</select>
+				</div>
+				<div id="shirtPatternSelect" class="invisible">
+					<p>What is the pattern of your shirt?</p>
+					<select id="shirtPattern">
+						<option>Solid</option>
+						<option>Thin-Striped</option>
+						<option>Medium-Striped</option>
+						<option>Thick-Striped</option>
+						<option>Checkered</option>
+					</select>
+				</div>
+				<div id="shirtColorSelect" class="invisible">
+					<p>What color is your shirt?</p>
+					<select id="shirtColor">
+						<option>White</option>
+						<option>Off-White</option>
+						<option>Light Blue</option>
+						<option>Light Pink</option>
+						<option>Gold</option>
+						<option>French Blue</option>
+						<option>Lavender</option>
+					</select>
+				</div>
+				<div id="tiePatternSelect" class="invisible">
+					<p>What is the pattern of your tie?</p>
+					<select id="tiePattern">
+						<option>Solid</option>
+						<option>Semi-Solid Repeating Pattern</option>
+						<option>Dotted</option>
+						<option>Floral</option>
+						<option>Paisley</option>
+						<option>Thin-Striped</option>
+						<option>Thick-Striped</option>
+						<option>Plaid</option>
+					</select>
+				</div>
+				<div id="tieColorSelect" class="invisible">
+					<p>What color is your tie?</p>
+					<select id="tieColor">
+						<option>Red</option>
+						<option>Burgundy</option>
+						<option>Blue</option>
+						<option>Navy</option>
+						<option>Light Orange</option>
+						<option>Pink</option>
+						<option>Lilac</option>
+						<option>Yellow</option>
+						<option>Green</option>
+					</select>
+				</div>
+				<div id="shoeColorSelect" class="invisible">
+					<p>What is the color of your shoes/belt?</p>
+					<select id="shoeColor">
+						<option>Black</option>
+						<option>Brown</option>
+						<option>Red/Burgundy</option>
+					</select>
+				</div>
 			</div>
+		<script>
+			var menus = document.getElementsByTagName("select");
+
+			for (var i = 0; i < menus.length; i++) {
+				menus[i].index = i;
+				menus[i].onchange = function(v){
+					console.log(v);
+					v.srcElement.parentElement.nextElementSibling.className = "";
+				};
+			}
+		</script>
 		</div>
 	</body>
 </html>
