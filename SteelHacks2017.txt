@@ -1,0 +1,42 @@
+ABSTRACT
+
+Website that helps the fashionably deficient to coordinate their outfits*
+
+1. User selects the items of clothing that they have
+	- select pattern that most closely matches item of clothes
+	- select colors for that pattern
+	
+2. Select level of fashionable
+	- street clothes
+	- business casual
+	- business professional
+	
+3. Tells user if it works
+	- if not, gives suggestions that will
+	
+	
+*Disclaimer: Only intended for male fashion
+
+
+PART I: The shirt
+
+1. User selects type of shirt from dropdown? menu
+2. Selects pattern that most closely matches shirt
+3. Select colors of pattern
+
+PART II: The pants
+
+1. User selects type of pants from dropdown? menu
+2. Selects pattern or material that most closely matches pants
+3. Select colors of pattern
+
+PART III: WILL IT BLEND?
+
+1. Checks to see if the type of shirt is compatable with type of pants
+2. Checks to see if colors are compatable
+
+3. Return feedback to tell the user why it doesn't work.
+
+PART IV: Accesorize that shit
+
+1. Shoes
