@@ -1,0 +1,14 @@
+body{
+	background-color: #393A66;
+	margin: 0px;
+}
+
+#container #header{
+	background-color: #393A66;
+	color: #FFFFFF;
+}
+
+#container #content{
+	background-color: #FFFFFF;
+	color: #000000;
+}
