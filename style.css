@@ -8,26 +8,45 @@ body{
 	color: #FFFFFF;
 }
 
+#container #header a{
+	color: white;
+}
+
+#container #header a:visited{
+	color: white;
+}
+
 #container #content{
 	background-color: #FFFFFF;
 	color: #000000;
 	position: absolute;
-	left: 10%;
-	width: 90%;
+	left: 200px;
+	width: calc(100% - 214px);
 	height: 100%;
+	padding: 7px;
 }
 
-#content div{
+#content div,p{
 	opacity: 1;
 	transition: opacity 1s;
 }
 
-.invisible{
+#content div:first-child{
+	margin-top: -10px;
+}
+
+#content .invisible{
 	opacity: 0 !important;
+}
+
+#content #feedback{
+	margin-top:20px;
+	font-size:20px;
 }
 
 .layer{
 	position:absolute;
 	left:0px;
-
+	margin-top:40px;
+	width: 200px;
 }

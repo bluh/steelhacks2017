@@ -1,7 +1,7 @@
 <!DOCTYPE html5>
 <html>
 	<head>
-		<title>SteelHacks 2017</title>
+		<title>It Suits You: A Submission to SteelHacks 2017</title>
 		<link rel="stylesheet" href="style.css">
 		<script src="garments.js"></script>
 		<script>
@@ -15,10 +15,11 @@
 						if(v.srcElement.index == menus.length - 1 || updates){
 							updates = true;
 							var feedback = getFeedback();
+							document.getElementById("feedback").className = "";
 							if(feedback.length > 0){
 								document.getElementById("feedback").innerHTML = feedback;
 							}else{
-								document.getElementById("feedback").innerHTML = "Good";
+								document.getElementById("feedback").innerHTML = "Your outfit is good!";
 							}
 						}else{
 							v.srcElement.parentElement.nextElementSibling.className = "";
@@ -32,7 +33,8 @@
 	<body onload="setupEvents()">
 		<div id="container">
 			<div id="header">
-				SteelHacks 2017
+				<h1>It Suits You: A Submission to SteelHacks 2017</h1>
+				<p>A submission to SteelHacks 2017. Check the <a href="https://github.com/bluh/steelhacks2017">source on GitHub</a>!</p>
 			</div>
 			<div id="content">
 				<div id="suitSelect">
@@ -103,9 +105,9 @@
 						<option>Red/Burgundy</option>
 					</select>
 				</div>
-				<div id="feedback"></div>	
+				<p id="feedback" class="invisible"></p>	
 			</div>
-			<div class="layer"></div>
+			<img class="layer" id="base" src="suitimages/blank.png"/>
 		</div>
 	</body>
 </html>
