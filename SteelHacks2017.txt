@@ -40,3 +40,30 @@ PART III: WILL IT BLEND?
 PART IV: Accesorize
 
 1. Shoes
+
+
+
+
+
+
+
+The user will be presented with a drop down menu. It will ask:
+
+What type of shirt will you be wearing?
+
+with the options:
+
+T-shirt
+Long sleeved shirt
+Polo shirt
+Short sleeved button up
+Long sleeved button up
+
+Another drop down menu:
+
+Which pattern is closest to the shirt?
+(drop down menu with many patterns)
+
+Another drop down menu:
+
+What are the main colors of the shirt?
